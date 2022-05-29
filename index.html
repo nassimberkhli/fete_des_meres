@@ -104,17 +104,11 @@
 </div>
 <br><br/>
 </form>
-<div id = "f">
-	<h1>Félicitation ! tu as réussis le quizz !! Bonne fête Maman !! Je t'aime !!</h1>
-	<br>
-	<button id="b" onclick = "bouton()" style="background-color: skyblue; border: solid black 4px; border-radius:24px ;">recommencer ?</button>
-</div>
-</div>
 
 </center>
 </body>
 <script type="text/javascript">
-	var n = true;
+
 	$(".q").change(function() {
 
 		var x = $("#q91").val().toLowerCase();
@@ -161,26 +155,21 @@
 			}
 		else if (x == "nassim") 
 			{
-				$("#f").toggle(); $("#q9").toggle();n = false;
-				
+				document.write("<body style = 'background: linear-gradient(blue, pink)'>")
+				document.write("<center>");
+				document.write('<div id = "f">');
+				document.write("<h1 style = 'font-family: Brush Script MT, Brush Script Std, cursive;'>Félicitation ! tu as réussis le quizz !! Bonne fête Maman !! Je t'aime !!</h1>");
+				document.write("</div>");
+				document.write("</center>");
+				document.write("</body>");
 			}
 
 		else 
 			{
-				if(n)
-				{
 					$(".qu").css("display", "none");$("#q1").css("display", "block");
 					$("#form")[0].reset();
 					alert("Mauvaise réponse, allez on recommence ;)");
-				}
 			}
 	})
-
-function bouton()
-	{
-		$("#q91").val("ll");
-		$("#form")[0].reset();
-		n = true;
-	}
 </script>
 </html>
