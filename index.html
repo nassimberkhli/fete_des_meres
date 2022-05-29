@@ -1,0 +1,186 @@
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<script src="jquery36.js" type="text/javascript">
+	</script>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<title>Fête des mères</title>
+</head>
+<body>
+<center>
+<form id = "form">
+<h1>Connaisez-vous vous vous-même réellement ?</h1>
+<br><br/><br><br/><br><br/>
+
+<div id = "body">
+<div class = "div1" style="border: solid black 2px;">
+<div id = "q1">
+	<strong><h3>Quelles sont vos couleurs dominantes ?</h3></strong>
+<p>bleu/rouge</p><input type="radio" class = "q" id = "q11">
+<p>jaune/bleu</p><input type="radio" class = "q" id = "q12">
+<p>rouge/jaune</p><input type="radio" class = "q" id = "q13">
+</div>
+</div>
+<br><br/>
+
+
+<div class = "div2" style="border: solid black 2px;">
+<div id = "q2" class = "qu"> 
+	<strong><h3>Quelle est votre technique pour flatuler assis ?</h3></strong>
+<p>crier (pour masquer le bruit)</p><input type="radio" class = "q" id = "q21">
+<p>nier la vérité après l'évènement</p><input type="radio" class = "q" id = "q22">
+<p>tenter un silencieux en soulevant une fesse</p><input type="radio" class = "q" id = "q23">
+</div>
+</div>
+<br><br/>
+
+<div class = "div3" style="border: solid black 2px;">
+<div id = "q3" class = "qu">
+	<strong><h3>De quelle façon rendiez-vous vos enfants obéissant ?</h3></strong>
+<p>vous les frappiez</p><input type="radio" class = "q" id = "q31">
+<p>vous boudez jusqu'à ce qu'ils obéissent</p><input type="radio" class = "q" id = "q32">
+<p>vous disiez la phrase suivante : "Je vais appeler baba !"</p><input type="radio" class = "q" id = "q33">
+</div>
+</div>
+<br><br/>
+
+<div class = "div4" style="border: solid black 2px;">
+<div id = "q4" class = "qu">
+	<strong><h3>De quelle façon rendez-vous vos enfants obéissant ?</h3></strong>
+<p>vous les frappiez</p><input type="radio" class = "q" id = "q41">
+<p>vous boudez jusqu'à ce qu'ils obéissent</p><input type="radio" class = "q" id = "q42">
+<p>vous disiez la phrase suivante : "Je vais appeler baba !"</p><input type="radio" class = "q" id = "q43">
+</div>
+</div>
+<br><br/>
+
+<div class = "div5" style="border: solid black 2px;">
+<div id = "q5" class = "qu">
+	<strong><h3>Vous vous estimez courageuse ?</h3></strong>
+<p>oui, mais au fond je ne le suis pas tant que ça</p><input type="radio" class = "q"  id = "q51">
+<p>non</p><input type="radio" class = "q"  id = "q52">
+<p>carrément !</p><input type="radio" class = "q"  id = "q53">
+</div>
+</div>
+<br><br/>
+
+<div class = "div6" style="border: solid black 2px;">
+<div id = "q6" class = "qu">
+	<strong><h3>Qu'est ce que vous préferiez ?</h3></strong>
+<p>aller dans un pays étranger pendant une semaine</p><input type="radio" class = "q"  id = "q61">
+<p>revenir au temps quand vos enfants avaient entre 6 et 10 ans pendant une semaine</p><input type="radio" class = "q"  id = "q62">
+<p>gagner 10 000 euros</p><input type="radio" class = "q"  id = "q63">
+</div>
+</div>
+<br><br/>
+
+<div class = "div7" style="border: solid black 2px;">
+<div id = "q7" class = "qu">
+	<strong><h3>La qualité principale chez votre mari est :</h3></strong>
+<p>son humour</p><input type="radio" class = "q"  id = "q71">
+<p>son innocence</p><input type="radio" class = "q"  id = "q72">
+<p>sa générosité</p><input type="radio" class = "q"  id = "q73">
+</div>
+</div>
+<br><br/>
+
+<div class = "div8" style="border: solid black 2px;">
+<div id = "q8" class = "qu">
+	<strong><h3>2 + 2 × 2 =</h3></strong>
+	<h3>(Parce que j'aime les mathématiques héhé ;] )</h3>
+<p>8</p><input type="radio" class = "q" id = "q81">
+<p>16</p><input type="radio" class = "q" id = "q82">
+<p>6</p><input type="radio" class = "q" id = "q83">
+</div>
+</div>
+<br><br/>
+
+<div class = "div9" style="border: solid black 2px;">
+<div id = "q9" class = "qu">
+	<strong><h3>Qui est l'auteur de ce site web ?</h3></strong>
+<input type="text" placeholder = "notez son prénom" class = "q" id = "q91">
+</div>
+</div>
+<br><br/>
+</form>
+<div id = "f">
+	<h1>Félicitation ! tu as réussis le quizz !! Bonne fête Maman !! Je t'aime !!</h1>
+	<br>
+	<button id="b" onclick = "bouton()" style="background-color: skyblue; border: solid black 4px; border-radius:24px ;">recommencer ?</button>
+</div>
+</div>
+
+</center>
+</body>
+<script type="text/javascript">
+	var n = true;
+	$(".q").change(function() {
+
+		var x = $("#q91").val().toLowerCase();
+
+		if (document.getElementById("q13").checked) 
+			{
+				$("#q2").toggle(); $("#q1").toggle();$("#form")[0].reset();
+				alert("Askip c'est vraiment vos couleurs domminantes, bon...");
+			}
+		else if (document.getElementById("q23").checked) 
+			{
+				$("#q3").toggle();$("#q2").toggle();$("#form")[0].reset();
+				alert("Vous restez vous-même pour toute occasion");
+			}
+		else if (document.getElementById("q33").checked) 
+			{
+				$("#q4").toggle(); $("#q3").toggle();$("#form")[0].reset();
+				alert("Quelle mère douce vous êtes");
+			}
+		else if (document.getElementById("q42").checked) 
+			{
+				$("#q5").toggle(); $("#q4").toggle();$("#form")[0].reset();
+				alert("Mère, vous resterez toujours une enfant");
+			}
+		else if (document.getElementById("q51").checked) 
+			{
+				$("#q6").toggle(); $("#q5").toggle();$("#form")[0].reset();
+				alert("Comme par exemple au Costa Rica où vous ne vouliez pas faire la tire au lienne avec votre mari");
+			}
+		else if (document.getElementById("q62").checked) 
+			{
+				$("#q7").toggle(); $("#q6").toggle();$("#form")[0].reset();
+				alert("Rien ne vaut vos bébés");
+			}
+		else if (document.getElementById("q73").checked) 
+			{
+				$("#q8").toggle(); $("#q7").toggle();$("#form")[0].reset();
+				alert("Une qualité tellement énorme que c'est l'une des seules raison de votre mariage");
+			}
+		else if (document.getElementById("q83").checked) 
+			{
+				$("#q9").toggle(); $("#q8").toggle();$("#form")[0].reset();
+				alert("Priorité à la multiplication")
+			}
+		else if (x == "nassim") 
+			{
+				$("#f").toggle(); $("#q9").toggle();n = false;
+				
+			}
+
+		else 
+			{
+				if(n)
+				{
+					$(".qu").css("display", "none");$("#q1").css("display", "block");
+					$("#form")[0].reset();
+					alert("Mauvaise réponse, allez on recommence ;)");
+				}
+			}
+	})
+
+function bouton()
+	{
+		$("#q91").val("ll");
+		$("#form")[0].reset();
+		n = true;
+	}
+</script>
+</html>

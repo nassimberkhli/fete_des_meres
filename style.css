@@ -1,0 +1,16 @@
+#q2,#q3,#q4,#q5,#q6,#q7,#q8,#q9,#f 
+{
+	display: none;
+}
+
+body{background-color: skyblue;}
+
+#body{background: linear-gradient(blue, pink);}
+
+.div1 {background: linear-gradient(blue, pink);}
+.div2 {background: linear-gradient(blue, pink);}
+
+
+h1,h3,p {font-family: Brush Script MT, Brush Script Std, cursive;}
+
+h3,p {font-size: 30px;}
